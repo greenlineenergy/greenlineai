@@ -46,11 +46,11 @@ const Navigation = () => {
     }
     setIsOpen(false);
   };
-  return <nav className={`sticky-nav ${isScrolled ? 'shadow-lg' : ''}`}>
+  return <nav className={`sticky-nav ${isScrolled ? 'shadow-lg backdrop-blur-xl' : 'backdrop-blur-md'} transition-all duration-300`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-            <motion.img src="https://horizons-cdn.hostinger.com/c22cdeb8-ea99-4bf3-beb4-ce34d6fb856b/b67dc11829391a652ab3a1ddb63a6369.jpg" alt="GreenLine Energy Logo" className="h-12 w-12 rounded-full" initial={{
+          <Link to="/" className="flex items-center gap-3 group" onClick={() => setIsOpen(false)}>
+            <motion.img src="https://horizons-cdn.hostinger.com/c22cdeb8-ea99-4bf3-beb4-ce34d6fb856b/b67dc11829391a652ab3a1ddb63a6369.jpg" alt="GreenLine Energy Logo" className="h-12 w-12 rounded-full transition-all duration-300 group-hover:shadow-lg group-hover:shadow-lime-500/50 group-hover:scale-110" initial={{
             opacity: 0,
             x: -20
           }} animate={{

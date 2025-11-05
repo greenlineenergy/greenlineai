@@ -50,8 +50,11 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-900 p-8 rounded-2xl border border-gray-700 flex flex-col"
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-2xl border border-lime-500/20 flex flex-col shadow-lg hover:shadow-2xl hover:shadow-lime-500/10 transition-all duration-300 backdrop-blur-sm relative overflow-hidden group"
             >
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10">
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 text-lime-400 fill-current" />
@@ -59,13 +62,14 @@ const TestimonialsSection = () => {
               </div>
               <blockquote className="text-light-text italic mb-6 flex-grow">"{testimonial.quote}"</blockquote>
               <div className="flex items-center">
-                <div className="bg-gray-700 rounded-full p-2 mr-4">
+                <div className="bg-gradient-to-br from-lime-500/20 to-teal-500/20 rounded-full p-2 mr-4 group-hover:shadow-lg group-hover:shadow-lime-500/30 transition-shadow duration-300">
                   <User className="h-6 w-6 text-lime-400" />
                 </div>
                 <div>
-                  <p className="font-bold text-white">{testimonial.name}</p>
+                  <p className="font-bold text-white group-hover:text-lime-400 transition-colors duration-300">{testimonial.name}</p>
                   <p className="text-sm text-gray-400">{testimonial.location}</p>
                 </div>
+              </div>
               </div>
             </motion.div>
           ))}

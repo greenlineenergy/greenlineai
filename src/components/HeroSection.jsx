@@ -28,7 +28,7 @@ const HeroSection = () => {
         duration: 0.8
       }} className="space-y-8">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            Melbourne Residents: Unlock up to <span className="text-lime-400">$9,900 in VEU Rebates Today</span>
+            Melbourne Residents: Unlock up to <span className="text-lime-400 neon-glow">$9,900 in VEU Rebates Today</span>
           </h1>
           
           <motion.p initial={{
@@ -40,7 +40,7 @@ const HeroSection = () => {
         }} transition={{
           duration: 0.8,
           delay: 0.2
-        }} className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">Upgrade old heaters, AC, or hot water to energy-efficient tech — slash bills, boost comfort, and cut emissions.</motion.p>
+        }} className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto drop-shadow-lg">Upgrade old heaters, AC, or hot water to energy-efficient tech — <span className="text-lime-300 font-semibold">slash bills, boost comfort, and cut emissions</span>.</motion.p>
           
           <motion.div initial={{
           opacity: 0,

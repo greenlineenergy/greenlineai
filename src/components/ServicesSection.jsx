@@ -52,9 +52,9 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="service-card"
+              className="service-card group"
             >
-              <div className="mb-6 flex justify-center">
+              <div className="mb-6 flex justify-center float-animation">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-4"> {/* Adjusted for dark background */}
