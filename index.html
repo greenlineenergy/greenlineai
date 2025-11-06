@@ -1,35 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M9FCFPFG');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GreenLine Energy Pty Ltd — Official Site | Melbourne VEU Rebates, Heating, Cooling & Solar</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0RWLG1TXC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preconnect" href="https://js-ap1.hs-scripts.com" crossorigin>
+    <link rel="preconnect" href="https://horizons-cdn.hostinger.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://js-ap1.hs-scripts.com">
 
-      gtag('config', 'G-K0RWLG1TXC');
-    </script>
-    <!-- Google tag (gtag.js) for G-SVR9TNB1YG -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVR9TNB1YG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-SVR9TNB1YG');
-    </script>
+    <!-- Preload Critical Hero Image -->
+    <link rel="preload" as="image" href="https://horizons-cdn.hostinger.com/c22cdeb8-ea99-4bf3-beb4-ce34d6fb856b/chatgpt-image-oct-9-2025-06_04_16-pm-1-a2wxi.png" fetchpriority="high">
 
     <!-- SEO -->
     <meta name="description" content="GreenLine Energy is Melbourne’s official VEU-accredited provider. Save up to $9,900 with combined government rebates on heat pump hot water, reverse cycle air conditioning, solar + battery, and hydronic heating. Trusted local experts. Call 13000 24-7 67." />
@@ -92,8 +78,47 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-ap1.hs-scripts.com/442275657.js"></script>
+
+    <!-- Analytics loaded after main content - deferred for performance -->
+    <!-- Google Tag Manager -->
+    <script>
+      window.addEventListener('load', function() {
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M9FCFPFG');
+      });
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Analytics - Deferred -->
+    <script>
+      window.addEventListener('load', function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-K0RWLG1TXC');
+        gtag('config', 'G-SVR9TNB1YG');
+
+        var script1 = document.createElement('script');
+        script1.async = true;
+        script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-K0RWLG1TXC';
+        document.head.appendChild(script1);
+      });
+    </script>
+
+    <!-- Start of HubSpot Embed Code - Deferred -->
+    <script type="text/javascript">
+      window.addEventListener('load', function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        script.defer = true;
+        script.src = '//js-ap1.hs-scripts.com/442275657.js';
+        document.body.appendChild(script);
+      });
+    </script>
     <!-- End of HubSpot Embed Code -->
   </body>
 </html>

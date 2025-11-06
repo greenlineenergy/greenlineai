@@ -253,13 +253,30 @@ export default defineConfig({
 		},
 	},
 	build: {
+		minify: 'terser',
+		terserOptions: {
+			compress: {
+				drop_console: true,
+				drop_debugger: true
+			}
+		},
+		cssCodeSplit: true,
+		chunkSizeWarningLimit: 1000,
 		rollupOptions: {
 			external: [
 				'@babel/parser',
 				'@babel/traverse',
 				'@babel/generator',
 				'@babel/types'
-			]
+			],
+			output: {
+				manualChunks: {
+					'vendor': ['react', 'react-dom', 'react-router-dom'],
+					'motion': ['framer-motion'],
+					'ui': ['@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-dialog'],
+					'email': ['@emailjs/browser']
+				}
+			}
 		}
 	}
 });
