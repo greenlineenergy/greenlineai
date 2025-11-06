@@ -1,0 +1,46 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import HotWater from '@/react-pages/HotWater';
+
+const metadata = {
+  "title": "Heat Pump Hot Water Systems | Rebates & Savings | GreenLine Energy",
+  "description": "Upgrade to an ultra-efficient heat pump hot water system and save up to 80% on costs. GreenLine Energy helps you access VEU, federal, and state rebates in Victoria & NSW.",
+  "canonicalUrl": "https://www.glenergy.com.au/hot-water",
+  "ogImage": "https://horizons-cdn.hostinger.com/c22cdeb8-ea99-4bf3-beb4-ce34d6fb856b/heatpump_installation_greenline-1-6aosh.jpeg",
+  "ogImageAlt": "GreenLine Energy"
+};
+---
+
+<BaseLayout
+  title={metadata.title}
+  description={metadata.description}
+  canonicalUrl={metadata.canonicalUrl}
+  ogImage={metadata.ogImage}
+  ogImageAlt={metadata.ogImageAlt}
+  noNavFooter={false}
+>
+  <HotWater client:only="react" />
+
+  <!-- Noscript fallback for critical CTAs -->
+  <noscript>
+    <div style="padding: 40px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); margin: 40px 20px; border-radius: 12px; text-align: center;">
+      <h2 style="color: white; font-size: 32px; margin-bottom: 20px;">Contact GreenLine Energy</h2>
+      <p style="color: white; font-size: 18px; margin-bottom: 30px;">
+        For the best experience, please enable JavaScript. Or contact us directly:
+      </p>
+      <a
+        href="tel:1300024767"
+        style="display: inline-block; background-color: white; color: #059669; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; margin: 10px;"
+      >
+        Call 13000 24-7 67
+      </a>
+      <br>
+      <a
+        href="mailto:info@greenlineenergy.com.au"
+        style="display: inline-block; background-color: white; color: #059669; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; margin: 10px;"
+      >
+        Email Us
+      </a>
+    </div>
+  </noscript>
+</BaseLayout>

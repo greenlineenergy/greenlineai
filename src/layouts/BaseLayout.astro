@@ -1,0 +1,161 @@
+---
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import ReferralModal from '@/components/ReferralModal';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import Chatbot from '@/components/Chatbot';
+import LiveRequestNotification from '@/components/LiveRequestNotification';
+import StickyCtaBar from '@/components/StickyCtaBar';
+import ExitIntentPopup from '@/components/ExitIntentPopup';
+import { Toaster } from '@/components/ui/toaster';
+import '@/index.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  canonicalUrl?: string;
+  noNavFooter?: boolean;
+}
+
+const {
+  title = 'GreenLine Energy Pty Ltd',
+  description = 'Melbourne\'s official VEU-accredited provider',
+  ogImage = 'https://horizons-cdn.hostinger.com/c22cdeb8-ea99-4bf3-beb4-ce34d6fb856b/ba73c24d322584d01517759472608fd1.png?v=20251023_0709',
+  ogImageAlt = 'GreenLine Energy',
+  canonicalUrl,
+  noNavFooter = false,
+} = Astro.props;
+
+const currentUrl = canonicalUrl || Astro.url.href;
+const topPadding = noNavFooter ? 'pt-0' : 'pt-[12.5rem] md:pt-[180px]';
+const liveNotificationPadding = noNavFooter ? 'pt-[3.5rem] md:pt-[50px]' : '';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
+
+    <!-- Cache Busting -->
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="YJ8tNB5osCaS7OWr4qFCnALayjOIwMcnPBAr6LnlqTo" />
+    <meta name="google-site-verification" content="G-SVR9TNB1YG" />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-M9FCFPFG');
+    </script>
+
+    <!-- Google Analytics - G-K0RWLG1TXC -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-K0RWLG1TXC"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0RWLG1TXC');
+    </script>
+
+    <!-- Google Analytics - G-SVR9TNB1YG -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-SVR9TNB1YG"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SVR9TNB1YG');
+    </script>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GreenLine Energy Pty Ltd",
+      "url": "https://www.glenergy.com.au/",
+      "logo": "https://www.glenergy.com.au/apple-touch-icon.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+61-1300-024-767",
+        "contactType": "customer service"
+      },
+      "sameAs": [],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Melbourne",
+        "addressRegion": "VIC",
+        "addressCountry": "AU"
+      }
+    }
+    </script>
+
+    <!-- HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" is:inline async defer src="//js-ap1.hs-scripts.com/442275657.js"></script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9FCFPFG"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <!-- Noscript message -->
+    <noscript>
+      <div style="padding: 20px; background-color: #fef2f2; border: 1px solid #f87171; margin: 20px; border-radius: 8px; text-align: center;">
+        <p style="color: #991b1b; font-size: 16px; margin: 0;">
+          For the best experience, please enable JavaScript in your browser.
+          <a href="https://www.enable-javascript.com/" style="color: #dc2626; text-decoration: underline;">Learn how</a>
+        </p>
+      </div>
+    </noscript>
+
+    <LiveRequestNotification client:only="react" />
+    {!noNavFooter && <StickyCtaBar client:only="react" />}
+
+    <div class={`min-h-screen flex flex-col bg-dark-background ${noNavFooter ? liveNotificationPadding : topPadding}`}>
+      {!noNavFooter && <Navigation client:only="react" />}
+
+      <main class="flex-grow">
+        <slot />
+      </main>
+
+      {!noNavFooter && <Footer client:only="react" />}
+      <ReferralModal client:only="react" />
+      <Chatbot client:only="react" />
+      <FloatingWhatsApp client:only="react" />
+      <ExitIntentPopup client:only="react" />
+      <Toaster client:only="react" />
+    </div>
+  </body>
+</html>

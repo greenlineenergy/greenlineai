@@ -1,0 +1,57 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import HeroSection from '@/components/HeroSection';
+import HeroImage from '@/components/HeroImage';
+import BigNumbers from '@/components/BigNumbers';
+import ServicesSection from '@/components/ServicesSection';
+import WhyChooseUsSection from '@/components/WhyChooseUsSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import PartnersSection from '@/components/PartnersSection';
+import ReferralBanner from '@/components/ReferralBanner';
+import WelcomeMessage from '@/components/WelcomeMessage';
+import BlogSection from '@/components/BlogSection';
+import CombinedCta from '@/components/CombinedCta';
+
+const previewImageUrl = "https://horizons-cdn.hostinger.com/c22cdeb8-ea99-4bf3-beb4-ce34d6fb856b/ba73c24d322584d01517759472608fd1.png?v=20251023_0709";
+---
+
+<BaseLayout
+  title="GreenLine Energy Pty Ltd — Official Site | Melbourne VEU Rebates, Heating, Cooling & Solar"
+  description="GreenLine Energy is Melbourne's official VEU-accredited provider. Save up to $9,900 with combined government rebates on heat pump hot water, reverse cycle air conditioning, solar + battery, and hydronic heating. Trusted local experts. Call 13000 24-7 67."
+  canonicalUrl="https://www.glenergy.com.au"
+  ogImage={previewImageUrl}
+  ogImageAlt="GreenLine Energy Home with logo and tagline 'Powering Australia's Clean Energy Future'"
+>
+  <div class="flex flex-col">
+    <HeroSection client:only="react" />
+    <HeroImage client:only="react" />
+    <BigNumbers client:only="react" />
+    <ServicesSection client:only="react" />
+    <WhyChooseUsSection client:only="react" />
+    <TestimonialsSection client:only="react" />
+    <ReferralBanner client:only="react" />
+    <BlogSection client:only="react" />
+    <PartnersSection client:only="react" />
+    <WelcomeMessage client:only="react" />
+    <CombinedCta client:only="react" />
+  </div>
+
+  <!-- Noscript fallback for critical CTAs -->
+  <noscript>
+    <div style="padding: 40px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); margin: 40px 20px; border-radius: 12px; text-align: center;">
+      <h2 style="color: white; font-size: 32px; margin-bottom: 20px;">Get Your Free Energy Assessment</h2>
+      <p style="color: white; font-size: 18px; margin-bottom: 30px;">
+        Save up to $9,900 with combined government rebates on heating, cooling, solar, and hot water systems.
+      </p>
+      <a
+        href="tel:1300024767"
+        style="display: inline-block; background-color: white; color: #059669; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px;"
+      >
+        Call 13000 24-7 67
+      </a>
+      <p style="color: white; margin-top: 20px; font-size: 14px;">
+        Or email us at <a href="mailto:info@greenlineenergy.com.au" style="color: white; text-decoration: underline;">info@greenlineenergy.com.au</a>
+      </p>
+    </div>
+  </noscript>
+</BaseLayout>

@@ -1,0 +1,46 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SolarBenefits from '@/react-pages/SolarBenefits';
+
+const metadata = {
+  "title": "{ogTitle}",
+  "description": "Melbourne's official VEU-accredited provider",
+  "canonicalUrl": "",
+  "ogImage": "https://horizons-cdn.hostinger.com/c22cdeb8-ea99-4bf3-beb4-ce34d6fb856b/ba73c24d322584d01517759472608fd1.png",
+  "ogImageAlt": "A thumbnail for an article about the benefits of solar power, with text over a green background and a logo."
+};
+---
+
+<BaseLayout
+  title={metadata.title}
+  description={metadata.description}
+  canonicalUrl={metadata.canonicalUrl}
+  ogImage={metadata.ogImage}
+  ogImageAlt={metadata.ogImageAlt}
+  noNavFooter={true}
+>
+  <SolarBenefits client:only="react" />
+
+  <!-- Noscript fallback for critical CTAs -->
+  <noscript>
+    <div style="padding: 40px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); margin: 40px 20px; border-radius: 12px; text-align: center;">
+      <h2 style="color: white; font-size: 32px; margin-bottom: 20px;">Contact GreenLine Energy</h2>
+      <p style="color: white; font-size: 18px; margin-bottom: 30px;">
+        For the best experience, please enable JavaScript. Or contact us directly:
+      </p>
+      <a
+        href="tel:1300024767"
+        style="display: inline-block; background-color: white; color: #059669; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; margin: 10px;"
+      >
+        Call 13000 24-7 67
+      </a>
+      <br>
+      <a
+        href="mailto:info@greenlineenergy.com.au"
+        style="display: inline-block; background-color: white; color: #059669; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; margin: 10px;"
+      >
+        Email Us
+      </a>
+    </div>
+  </noscript>
+</BaseLayout>

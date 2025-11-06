@@ -4,11 +4,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite --host :: --port 3000",
-    "build": "vite build",
-    "preview": "vite preview --host :: --port 3000"
+    "dev": "astro dev --host :: --port 3000",
+    "build": "astro build",
+    "preview": "astro preview --host :: --port 3000",
+    "dev:vite": "vite --host :: --port 3000",
+    "build:vite": "vite build"
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.1",
+    "@astrojs/sitemap": "^3.6.0",
+    "@astrojs/tailwind": "^6.0.2",
     "@emailjs/browser": "^4.3.3",
     "@emotion/is-prop-valid": "^1.2.1",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -21,6 +26,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
     "@radix-ui/react-toast": "^1.1.5",
+    "astro": "^5.15.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
